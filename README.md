@@ -23,10 +23,10 @@ Configuration Flow :
 #### Install required Terraform Plugins
 
 ```  
-Terraform 1 
+Terraform - Install terraform and run terraform commands to manage resources on Azure, AWS and GCP.
 https://marketplace.visualstudio.com/items?itemName=ms-devlabs.custom-terraform-tasks
 
-Terraform 2 
+Terraform Build & Release Tasks
 https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-tasks-terraform
 
 ```
@@ -34,7 +34,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 #### Create new Azure DevOps Project
  
 ```
-1.1 Login to https://dev.azure.com/GBBuenaflor and create new Project then create new Pipeline Select Github
+1.1 Login to https://dev.azure.com/ and create new Project. Then create new Pipeline.
 ```
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC03.png)
@@ -42,7 +42,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 
 
 ```
-1.2  Select your github repository where you checkin the Azure Terraform
+1.2  Select your github repository where you checked-in the Azure Terraform
 ```
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC04.png)
@@ -57,13 +57,16 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 
 
  
+```
+1.4 Replace with code from step 2 to 5.
+```
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC06.png)
 
 
 
 ```
-1.4 Create new Service Connection.
+1.5 Create new Service Connection for Azure ARM, DockerHub and Azure Container Registry.
 ``` 
  
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC07.png)
@@ -115,7 +118,7 @@ steps:
 ### 3. Terraform Apply command will provision AKS Cluster to Azure.
 
 
-#### Create task form Terraform command "apply" 
+#### Create task for Terraform "apply" command
 
 ```
 - task: TerraformCLI@0
@@ -131,7 +134,7 @@ steps:
 ### 4. Terraform Destroy command will de-provision AKS Cluster to Azure.  
 
 
-#### Create task form Terraform command "apply" 
+#### Create task for Terraform "destroy" command
 
 ```
 - task: TerraformCLI@0
@@ -145,13 +148,13 @@ steps:
 
 
 ----------------------------------------------------------
-#### View AKS provisioned (create) using Azure DevOps
+#### View provisioned AKS using Azure DevOps
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC08.png)
 
 
 
-#### View AKS de-provisioned (delete) using Azure DevOps
+#### View de-provisioned AKS using Azure DevOps
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC09.png)
 
