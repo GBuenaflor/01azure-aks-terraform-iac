@@ -42,7 +42,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 
 
 ```
-1.2 
+1.2  Select your github repository where you checkin the Azure Terraform
 ```
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC04.png)
@@ -50,25 +50,24 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 
 
 ```
-1.3 Select your Github Repository
+1.3 Click starer Pipeline , Then edit the Azure Pipeline code , replace with code in step 3 - 4.
 ```
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC05.png)
 
 
-
-```
-1.4 Click starer Pipeline , Then edit the Azure Pipeline code , replace with code in step 3 - 4.
-```
-
-
-```
-1.5 Create new Service Connection.
-```
+ 
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC06.png)
 
+
+
+```
+1.4 Create new Service Connection.
+``` 
  
+![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC07.png)
+
  
  
 ----------------------------------------------------------
@@ -148,13 +147,13 @@ steps:
 ----------------------------------------------------------
 #### View AKS provisioned (create) using Azure DevOps
 
-![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC07.png)
+![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC08.png)
 
 
 
 #### View AKS de-provisioned (delete) using Azure DevOps
 
-![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC08.png)
+![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC09.png)
 
 
 
