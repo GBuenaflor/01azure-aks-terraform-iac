@@ -8,8 +8,8 @@
 
 ### Configuration Flow :
 
-1. Install Terraform Plugins reequired for Development Machine and set up Azure DevOps Pipeline
-2. Create new Azure DevOps Release Pipeline with service connection to Azure ARM, this will provision AKS Cluster to Azure.
+1. Install Terraform Plugins required for Development Machine and set up Azure DevOps Pipeline
+2. Create a new Azure DevOps Release Pipeline with service connection to Azure ARM, this will provision AKS Cluster to Azure.
 3. Terraform Apply command will provision AKS Cluster to Azure.
 4. Terraform Destroy command will de-provision AKS Cluster to Azure.  
 5. Check-in Terraform Codes to Github.
@@ -32,7 +32,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 #### Create new Azure DevOps Project
  
 ```
-1.1 Login to https://dev.azure.com/ and create new Project. Then create new Pipeline.
+1.1 Login to https://dev.azure.com/ and create a new Project. Then create a new Pipeline.
 ```
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC03.png)
@@ -40,7 +40,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 
 
 ```
-1.2  Select your github repository where you checked-in the Azure Terraform
+1.2  Select your Github repository where you checked-in the Azure Terraform
 ```
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC04.png)
@@ -48,7 +48,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 
 
 ```
-1.3 Click starer Pipeline , Then edit the Azure Pipeline code , replace with code in step 3 - 4.
+1.3 Click starer Pipeline, Then edit the Azure Pipeline code, replace with code in step 3 - 4.
 ```
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC05.png)
@@ -64,7 +64,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 
 
 ```
-1.5 Create new Service Connection for Azure ARM, DockerHub and Azure Container Registry.
+1.5 Create new Service Connection for Azure ARM, DockerHub, and Azure Container Registry.
 ``` 
  
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC07.png)
@@ -72,10 +72,10 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
  
  
 ----------------------------------------------------------
-### 2. Create new Azure DevOps Release Pipeline with service connection to Azure ARM, this will provision AKS Cluster to Azure.
+### 2. Createa  new Azure DevOps Release Pipeline with service connection to Azure ARM, this will provision AKS Cluster to Azure.
 
 
-#### Create new Azure Pipeline trigger, pool, steps and initial task
+#### Create a new Azure Pipeline trigger, pool, steps, and initial task
 
 ```
 trigger:
@@ -116,7 +116,7 @@ steps:
 ### 3. Terraform Apply command will provision AKS Cluster to Azure.
 
 
-#### Create task for Terraform "apply" command
+#### Create a task for Terraform "apply" command
 
 ```
 - task: TerraformCLI@0
@@ -132,7 +132,7 @@ steps:
 ### 4. Terraform Destroy command will de-provision AKS Cluster to Azure.  
 
 
-#### Create task for Terraform "destroy" command
+#### Create a task for Terraform "destroy" command
 
 ```
 - task: TerraformCLI@0
@@ -162,5 +162,4 @@ steps:
 Link to other Microsoft Azure projects
 https://github.com/GBuenaflor/01azure
 </br>
-
-Note: My Favorite > Microsoft Technologies
+ 
