@@ -72,7 +72,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
  
  
 ----------------------------------------------------------
-### 2. Createa  new Azure DevOps Release Pipeline with service connection to Azure ARM, this will provision AKS Cluster to Azure.
+### 2. Create a new Azure DevOps Release Pipeline with service connection to Azure ARM, this will provision AKS Cluster to Azure.
 
 
 #### Create a new Azure Pipeline trigger, pool, steps, and initial task
