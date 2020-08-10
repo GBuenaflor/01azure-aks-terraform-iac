@@ -6,7 +6,7 @@
 
 High Level Architecture Diagram: 
 
-![Image description](https://github.com/GBuenaflor/01azure-asp.netcore-mvc-sql-aks/blob/master/Images/GB-AzureDevOps-AKS-IaC02.png)
+![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC02.png)
 
 Configuration Flow :
 
@@ -37,7 +37,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 1.1 Login to https://dev.azure.com/GBBuenaflor and create new Project then create new Pipeline Select Github
 ```
 
-![Image description](https://github.com/GBuenaflor/01azure-asp.netcore-mvc-sql-aks/blob/master/Images/GB-AzureDevOps-AKS-IaC03.png)
+![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC03.png)
 
 
 
@@ -45,7 +45,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 1.2 
 ```
 
-![Image description](https://github.com/GBuenaflor/01azure-asp.netcore-mvc-sql-aks/blob/master/Images/GB-AzureDevOps-AKS-IaC04.png)
+![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC04.png)
 
 
 
@@ -53,7 +53,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 1.3 Select your Github Repository
 ```
 
-![Image description](https://github.com/GBuenaflor/01azure-asp.netcore-mvc-sql-aks/blob/master/Images/GB-AzureDevOps-AKS-IaC05.png)
+![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC05.png)
 
 
 
@@ -66,7 +66,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 1.5 Create new Service Connection.
 ```
 
-![Image description](https://github.com/GBuenaflor/01azure-asp.netcore-mvc-sql-aks/blob/master/Images/GB-AzureDevOps-AKS-IaC06.png)
+![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC06.png)
 
  
  
@@ -148,13 +148,13 @@ steps:
 ----------------------------------------------------------
 #### View AKS provisioned (create) using Azure DevOps
 
-![Image description](https://github.com/GBuenaflor/01azure-asp.netcore-mvc-sql-aks/blob/master/Images/GB-AzureDevOps-AKS-IaC07.png)
+![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC07.png)
 
 
 
 #### View AKS de-provisioned (delete) using Azure DevOps
 
-![Image description](https://github.com/GBuenaflor/01azure-asp.netcore-mvc-sql-aks/blob/master/Images/GB-AzureDevOps-AKS-IaC08.png)
+![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC08.png)
 
 
 
