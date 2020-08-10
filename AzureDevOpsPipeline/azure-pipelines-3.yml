@@ -1,0 +1,85 @@
+#-----------------------------------------------------------------
+# Deploy ASP.net MVC Core and SQL Linux to AKS - Azure DevOps CICD
+#
+# Prerequisite: The Azure Kubernetes Cluster
+#
+# - Implemented with two Stages:
+#   - stage 1 : Build Docker Image and Publish the K8S Files
+#   - stage 2 : Download the K8S Files and deploy Docker Image to AKS Cluster
+#
+# - Add Azure DevOps Service Connection to:
+#   - DockerHub or Azure Container Registry
+#   - Github
+#   - Azure Kubernetes Service
+#
+# - Upload generated SSH key to Azure DevOps > Library > SecureFiles
+# 
+#-----------------------------------------------------------------
+
+trigger:
+- master
+
+resources:
+- repo: self
+
+variables:
+  tag: '$(Build.BuildId)'
+
+stages:
+
+# -----------------------------------------------------
+# Build Docker Image and Publish the K8S Files
+# -----------------------------------------------------
+
+- stage: Build
+  displayName: Build image
+  jobs:  
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'dockerhubconnection'
+        repository: 'gbbuenaflor/Web01Aks'
+        command: 'buildAndPush'
+        Dockerfile: '$(Build.SourcesDirectory)/Web01/Dockerfile'
+        tags: '$(tag)'
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: '$(System.DefaultWorkingDirectory)/Web01.kubernetes.Azure'
+        Contents: '$(System.DefaultWorkingDirectory)/Web01.kubernetes.Azure/*.yaml'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)/Web01.kubernetes.Azure'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'manifests'
+        publishLocation: 'Container'
+
+# -----------------------------------------------------
+# Download the K8S Files and deploy Docker Image to AKS Cluster
+# -----------------------------------------------------
+
+- stage: Deploy
+  displayName: Deploy image
+  jobs:  
+  - job: Deploy
+    displayName: Deploy
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        buildType: 'current'
+        artifactName: 'manifests'
+        itemPattern: '**/*.yaml'
+        targetPath: '$(System.ArtifactsDirectory)'
+    - task: KubernetesManifest@0
+      inputs:
+        action: 'deploy'
+        kubernetesServiceConnection: 'AzureKubernetesConnection'
+        namespace: 'default'
+        manifests: '$(System.DefaultWorkingDirectory)/Web01.kubernetes.Azure/06webandsqldeployment.yaml'
+        containers: 'gbbuenaflor/Web01Aks:$(tag)'
+ 
