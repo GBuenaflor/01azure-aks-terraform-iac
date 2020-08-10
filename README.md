@@ -1,14 +1,12 @@
 ----------------------------------------------------------
-#  Azure Kubernetes Services (AKS) - Part 03
- 
-----------------------------------------------------------
+#  Azure Kubernetes Services (AKS) - Part 03  
 ## Provisioning Azure Kubernetes Service with Terraform using Azure DevOps - IaC
 
-High Level Architecture Diagram: 
+### High Level Architecture Diagram: 
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC02.png)
 
-Configuration Flow :
+### Configuration Flow :
 
 1. Install Terraform Plugins reequired for Development Machine and set up Azure DevOps Pipeline
 2. Create new Azure DevOps Release Pipeline with service connection to Azure ARM, this will provision AKS Cluster to Azure.
