@@ -95,7 +95,7 @@ steps:
 ```
 
 
-#### Create task form Terraform command "init" 
+#### Create a task for Terraform  "init" command
 
 ```
 - task: TerraformCLI@0
@@ -158,9 +158,8 @@ steps:
 
 
 
- 
+</br>
 Link to other Microsoft Azure projects
 https://github.com/GBuenaflor/01azure
+</br>
  
- 
-Note: My Favorite -> Microsoft :D
