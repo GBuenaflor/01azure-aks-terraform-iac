@@ -48,7 +48,7 @@ https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-
 
 
 ```
-1.3 Click starer Pipeline, Then edit the Azure Pipeline code, replace with code in step 3 - 4.
+1.3 Click the starter Pipeline.
 ```
 
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC05.png)
