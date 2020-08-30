@@ -157,10 +157,6 @@ steps:
 ![Image description](https://github.com/GBuenaflor/01azure-aks-terraform-iac/blob/master/Images/GB-AzureDevOps-AKS-IaC09.png)
 
 
-
- 
-Link to other Microsoft Azure projects
-https://github.com/GBuenaflor/01azure
- 
+Microsoft Azure Container Ecosystem - "nugget series"  > [Click this Link](https://github.com/GBuenaflor/gbuenaflor.github.io)  
  
 Note: My Favorite -> Microsoft :D
